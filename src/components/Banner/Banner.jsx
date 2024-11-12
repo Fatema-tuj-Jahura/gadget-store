@@ -15,11 +15,11 @@ const Banner = () => {
           </button>
         </div>
   
-        {/* Positioned Image with Border */}
+        
         <div className="absolute -bottom-12 w-full flex justify-center z-20">
          <div className="p-4 rounded-lg border-4 border-white shadow-2xl">
          <img
-          src={bannerImg} // Replace with your actual image path
+          src={bannerImg} 
           alt=""
           className="w-[500px] h-[230px] rounded-lg object-cover"
          />

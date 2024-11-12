@@ -1,0 +1,178 @@
+[
+  {
+    "product_id": 1,
+    "product_title": "High-Performance Laptop",
+    "product_image": "https://i.ibb.co/hyC3zk4/man-looking-bill-energy-crisis.jpg",
+    "category": "Laptops",
+    "price": 899,
+    "description": "A powerful laptop equipped with the latest Intel processor and high-end graphics for gaming and productivity.",
+    "specification": ["Intel Core i7", "16GB RAM", "512GB SSD", "15.6 inch Full HD Display"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 2,
+    "product_title": "Ultra-thin Laptop",
+    "product_image": "https://i.ibb.co/KhL6m5R/Ultra-thin-Laptop.jpg",
+    "category": "Laptops",
+    "price": 1099,
+    "description": "An ultra-thin laptop with long battery life, perfect for professionals on the go.",
+    "specification": ["Intel Core i5", "8GB RAM", "256GB SSD", "13.3 inch Retina Display"],
+    "availability": true,
+    "rating": 4.4
+  },
+  {
+    "product_id": 3,
+    "product_title": "Gaming Laptop",
+    "product_image": "https://i.ibb.co/c1dz5XW/Gaming-Laptop.jpg",
+    "category": "Laptops",
+    "price": 1299,
+    "description": "High-performance gaming laptop with powerful GPU for an immersive gaming experience.",
+    "specification": ["AMD Ryzen 7", "16GB RAM", "1TB SSD", "15.6 inch 144Hz Display"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": 4,
+    "product_title": "Business Laptop",
+    "product_image": "https://i.ibb.co/t3DMzs0/Business-Laptop.jpg",
+    "category": "Laptops",
+    "price": 799,
+    "description": "Reliable and durable laptop ideal for business professionals.",
+    "specification": ["Intel Core i5", "8GB RAM", "512GB SSD", "14 inch Full HD Display"],
+    "availability": false,
+    "rating": 4.3
+  },
+  {
+    "product_id": 5,
+    "product_title": "Convertible 2-in-1 Laptop",
+    "product_image": "https://i.ibb.co/12jd4Bm/Convertible-2-in-1-Laptop.jpg",
+    "category": "Laptops",
+    "price": 999,
+    "description": "Versatile laptop with 360-degree hinge, perfect for both work and entertainment.",
+    "specification": ["Intel Core i7", "16GB RAM", "256GB SSD", "13.3 inch Touch Display"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 6,
+    "product_title": "Budget-Friendly Laptop",
+    "product_image": "https://i.ibb.co/FbSQNtv/Budget-Friendly-Laptop.jpg",
+    "category": "Laptops",
+    "price": 549,
+    "description": "Affordable laptop with essential features for everyday use.",
+    "specification": ["Intel Core i3", "4GB RAM", "128GB SSD", "15.6 inch HD Display"],
+    "availability": true,
+    "rating": 4.0
+  },
+  {
+    "product_id": 7,
+    "product_title": "Smartphone with Triple Camera",
+    "product_image": "https://i.ibb.co/4tn1zNs/Smartphone-with-Triple-Camera.jpg",
+    "category": "Phones",
+    "price": 699,
+    "description": "Feature-packed smartphone with a triple camera setup for stunning photos.",
+    "specification": ["128GB Storage", "6GB RAM", "Triple Rear Camera", "6.5 inch Display"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 8,
+    "product_title": "Budget-Friendly Smartphone",
+    "product_image": "https://i.ibb.co/rm8q9h6/Budget-Friendly-Smartphone.jpg",
+    "category": "Phones",
+    "price": 399,
+    "description": "An affordable smartphone with a large screen and long battery life.",
+    "specification": ["64GB Storage", "4GB RAM", "Dual Camera", "6.3 inch Display"],
+    "availability": true,
+    "rating": 4.2
+  },
+  {
+    "product_id": 9,
+    "product_title": "Wireless Earbuds",
+    "product_image": "https://i.ibb.co/vLRM0n7/Wireless-Earbuds.jpg",
+    "category": "Accessories",
+    "price": 79,
+    "description": "Compact and convenient wireless earbuds with excellent sound quality.",
+    "specification": ["Bluetooth 5.0", "Touch Controls", "20-hour Battery Life", "Water-Resistant"],
+    "availability": true,
+    "rating": 4.3
+  },
+  {
+    "product_id": 10,
+    "product_title": "USB-C Charging Cable",
+    "product_image": "https://i.ibb.co/0Ff67F7/USB-C-Charging-Cable.jpg",
+    "category": "Accessories",
+    "price": 15,
+    "description": "Durable USB-C charging cable for fast charging and data transfer.",
+    "specification": ["1 meter length", "Nylon Braided", "Fast Charging Compatible"],
+    "availability": false,
+    "rating": 4.1
+  },
+  {
+    "product_id": 11,
+    "product_title": "Smart Watch - Fitness Tracker",
+    "product_image": "https://i.ibb.co/pryPXpH/Smart-Watch-Fitness-Tracker.jpg",
+    "category": "Smart Watches",
+    "price": 199,
+    "description": "Smart watch with advanced fitness tracking and heart rate monitoring.",
+    "specification": ["Heart Rate Monitor", "Sleep Tracker", "GPS", "Water-Resistant"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": 12,
+    "product_title": "Smart Watch with AMOLED Display",
+    "product_image": "https://i.ibb.co/BBR7GqV/Smart-Watch-with-AMOLED-Display.jpg",
+    "category": "Smart Watches",
+    "price": 249,
+    "description": "Premium smart watch with AMOLED display and customizable watch faces.",
+    "specification": ["AMOLED Display", "Custom Watch Faces", "5-day Battery", "Water-Resistant"],
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_id": 13,
+    "product_title": "MacBook Air - M1 Chip",
+    "product_image": "https://i.ibb.co/8Df8qpk/Mac-Book-Air-M1-Chip.jpg",
+    "category": "MacBook",
+    "price": 999,
+    "description": "Lightweight MacBook Air with powerful M1 chip for fast performance.",
+    "specification": ["Apple M1 Chip", "8GB RAM", "256GB SSD", "13.3 inch Retina Display"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 14,
+    "product_title": "MacBook Pro - M2 Chip",
+    "product_image": "https://i.ibb.co/rsQkb4P/Mac-Book-Pro.jpg",
+    "category": "MacBook",
+    "price": 1299,
+    "description": "High-performance MacBook Pro with M2 chip and extended battery life.",
+    "specification": ["Apple M2 Chip", "16GB RAM", "512GB SSD", "14 inch Retina Display"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": 15,
+    "product_title": "iPhone 13 Pro",
+    "product_image": "https://i.ibb.co/JHfcTDW/i-Phone-13-Pro.jpg",
+    "category": "iPhone",
+    "price": 999,
+    "description": "Apple iPhone 13 Pro with advanced camera system and A15 Bionic chip.",
+    "specification": ["A15 Bionic Chip", "128GB Storage", "Triple Camera", "6.1 inch Super Retina XDR Display"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": 16,
+    "product_title": "iPhone 14",
+    "product_image": "https://i.ibb.co/ygTWSs7/i-Phone-14.jpg",
+    "category": "iPhone",
+    "price": 1199,
+    "description": "Latest iPhone 14 with improved battery life and new camera features.",
+    "specification": ["A16 Bionic Chip", "256GB Storage", "Dual Camera", "6.1 inch Super Retina XDR Display"],
+    "availability": true,
+    "rating": 4.9
+  }
+]

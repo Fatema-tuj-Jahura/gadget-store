@@ -5,7 +5,7 @@ import { FaShoppingCart, FaHeart } from 'react-icons/fa';
 const NavBar = () => {
     return (
         <nav className="bg-purple-500 rounded-t-xl px-6 py-3 flex items-center justify-between text-white mt-4">
-        {/* Logo */}
+        
         <div className="text-lg font-semibold">
             Gadget Heaven
         </div>

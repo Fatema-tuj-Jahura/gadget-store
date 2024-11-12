@@ -1,16 +1,14 @@
 const Footer = () => {
     return (
         <footer className="bg-gray-100 mt-20  py-10 px-4 text-center">
-      {/* Brand and Tagline */}
-      <div className="mb-8">
-        <h2 className="text-2xl text-black font-semibold">Gadget Heaven</h2>
-        <p className="text-sm text-gray-600">Leading the way in cutting-edge technology and innovation.</p>
-      </div>
+      
+        <div className="mb-8">
+         <h2 className="text-2xl text-black font-semibold">Gadget Heaven</h2>
+         <p className="text-sm text-gray-600">Leading the way in cutting-edge technology and innovation.</p>
+        </div>
       <hr className="border-gray-300 my-8 w-3/4 mx-auto" />
-
-      {/* Links */}
-      <div className="flex justify-center space-x-16 text-sm">
-        {/* Services */}
+       <div className="flex justify-center space-x-16 text-sm">
+        
         <div>
           <h3 className="font-semibold">Services</h3>
           <ul className="mt-2 space-y-1">
@@ -21,7 +19,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Company */}
         <div>
           <h3 className="font-semibold">Company</h3>
           <ul className="mt-2 space-y-1">
@@ -31,7 +28,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Legal */}
         <div>
           <h3 className="font-semibold">Legal</h3>
           <ul className="mt-2 space-y-1">
