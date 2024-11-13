@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Gadgets = () => {
     const [gadgets, setGadgets] = useState([]);
     const [filteredGadgets, setFilteredGadgets] = useState([]);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState("All Products");
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('./gadgetsData.json')
@@ -58,7 +60,7 @@ const Gadgets = () => {
                             <h3 className="text-lg font-semibold">{gadget.product_title}</h3>
                             <p className="text-gray-600">Price: ${gadget.price}</p>
                             <button
-                                onClick={() => alert(`View details for ${gadget.product_title}`)}
+                                onClick={() => navigate(`/details/${gadget.product_id}`)}
                                 className="mt-4 px-4 py-2 bg-purple-500 text-white rounded-lg w-full"
                             >
                                 View Details
