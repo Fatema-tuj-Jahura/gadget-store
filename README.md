@@ -4,7 +4,7 @@ A modern e-commerce website where users can browse, add gadgets to their cart or
 
 ## Live Website
 
-**[Gadget Store Live Site]()**
+**[Gadget Store Live Site](https://jazzy-pika-fc7dd7.netlify.app/)**
 
 ## Requirement Document
 
