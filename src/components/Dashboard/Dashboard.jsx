@@ -4,9 +4,19 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { getStoredAddList } from '../../utility/addToDB';
 import { FaTimes } from 'react-icons/fa';
+import { getStoredWishList } from '../../utility/addAgainDB';
 
 const Dashboard = () => {
     const [addGadget, setAddGadget] = useState([]);
+    const [addWishGadget, setAddWishgadget] = useState([]);
+
+    useEffect(() => {
+        const storedWishList = getStoredWishList();
+        const storedWishListInt = storedWishList.map(id => parseInt(id));
+        const wishList = allGadgets.filter(gadget => storedWishListInt.includes(gadget.product_id));
+        setAddWishgadget(wishList);
+    }, [])
+
     const [sortDescending, setSortDescending] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const navigate = useNavigate();
@@ -43,7 +53,11 @@ const Dashboard = () => {
     const handleRemove = (productId) => {
         setAddGadget(addGadget.filter(gadget => gadget.product_id !== productId));
     };
+    // Remove item from wishlist
+    const handleRemoveWish = (productId) => {
+        setAddWishgadget(addWishGadget.filter(gadget => gadget.product_id !== productId));
 
+    }
     return (
         <div className="min-h-screen bg-gray-100">
             {/* Header Section */}
@@ -106,7 +120,33 @@ const Dashboard = () => {
                     </TabPanel>
 
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                    <div className="p-6 bg-white rounded-lg shadow-lg">
+                            <div className="flex justify-between items-center mb-4">
+                                <h3 className="text-xl font-semibold">WishList</h3>
+                            </div>
+                            <div>
+                                {addWishGadget.map(gadget => (
+                                    <div key={gadget.product_id} className="flex items-center justify-between p-4 border rounded-lg shadow-md mb-4 bg-gray-50">
+                                        <div className="flex items-center gap-4">
+                                            <img
+                                                src={gadget.product_image}
+                                                alt={gadget.product_title}
+                                                className="h-16 w-16 object-cover rounded-lg"
+                                            />
+                                            <div>
+                                                <h3 className="text-lg font-semibold">{gadget.product_title}</h3>
+                                                <p className='text-gray-400'>{gadget.description}</p>
+                                                <p className="text-black">Price: ${gadget.price}</p>
+                                                <button className='bg-purple-500 text-white px-4 py-1 rounded-full'>Add to Cart</button>
+                                            </div>
+                                        </div>
+                                        <button
+                                        onClick={() => handleRemoveWish(gadget.product_id)}
+                                         className="text-red-500 text-lg font-semibold ml-4"><FaTimes /></button>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>
