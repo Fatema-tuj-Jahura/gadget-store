@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
+import { Helmet } from 'react-helmet-async';
 const FeedBack = () => {
     const navigate = useNavigate();
     const [showModal, setShowModal] = useState(false);
@@ -40,6 +40,9 @@ const FeedBack = () => {
 
     return (
         <div>
+            <Helmet>
+              <title>Feedback - Gadget Heaven</title>
+            </Helmet>
             <div className="flex flex-col items-center justify-center p-6 bg-gray-100">
                 <h1 className="text-4xl font-bold text-purple-600 mb-4">About Us</h1>
                 <p className="text-lg text-gray-700 max-w-2xl text-center">

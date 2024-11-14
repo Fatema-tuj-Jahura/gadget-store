@@ -4,7 +4,7 @@ import { FaStar, FaHeart, FaShoppingCart} from 'react-icons/fa';
 import {  toast } from 'react-toastify';
 import { addCart } from '../../utility/addToDB';
 import { wishCart } from '../../utility/addAgainDB';
-
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -39,6 +39,9 @@ const Details = () => {
 
     return (
         <div className=' min-h-screen'>
+            <Helmet>
+              <title>Details - Gadget Heaven</title>
+            </Helmet>
             <div className="relative z-10 flex flex-col items-center bg-purple-500 text-center text-white pt-5 pb-20 gap-2">
              <h2 className="text-3xl font-bold">Product Details</h2>
              <p className="text-base font-normal">

@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import { getStoredAddList } from '../../utility/addToDB';
 import { FaTimes } from 'react-icons/fa';
 import { getStoredWishList } from '../../utility/addAgainDB';
+import { Helmet } from 'react-helmet-async';
 
 const Dashboard = () => {
     const [addGadget, setAddGadget] = useState([]);
@@ -60,6 +61,9 @@ const Dashboard = () => {
     }
     return (
         <div className="min-h-screen bg-gray-100">
+            <Helmet>
+              <title>Dashboard - Gadget Heaven</title>
+            </Helmet>
             {/* Header Section */}
             <div className="bg-purple-500 text-white text-center py-8 flex flex-col gap-2 items-center">
                 <h2 className="text-3xl font-bold">Dashboard</h2>

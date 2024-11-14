@@ -1,12 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
 import {
   createBrowserRouter,
   RouterProvider,
-} from "react-router-dom";
+} from 'react-router-dom';
 import Root from './components/Root/Root.jsx';
 import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
@@ -15,35 +16,36 @@ import FeedBack from './components/FeedBack/FeedBack.jsx';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root></Root>,
     children: [
       {
         path: '/',
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: '/details/:id',
         element: <Details></Details>,
-        loader: () => fetch('/gadgetsData.json')
+        loader: () => fetch('/gadgetsData.json'),
       },
       {
-        path:'dashboard',
+        path: 'dashboard',
         element: <Dashboard></Dashboard>,
-        loader: () => fetch('/gadgetsData.json')
+        loader: () => fetch('/gadgetsData.json'),
       },
       {
         path: 'feedback',
-        element: <FeedBack></FeedBack>
-
-      }
-    ]
+        element: <FeedBack></FeedBack>,
+      },
+    ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-    <ToastContainer/>
-  </StrictMode>,
-)
+    <HelmetProvider> {/* Wrap your app with HelmetProvider */}
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </HelmetProvider>
+  </StrictMode>
+);
