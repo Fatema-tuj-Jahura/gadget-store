@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
+import { HelmetProvider } from 'react-helmet-async';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,6 +13,7 @@ import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import FeedBack from './components/FeedBack/FeedBack.jsx';
+import NotFound from './components/NotFound/NotFound.jsx'; 
 
 const router = createBrowserRouter([
   {
@@ -37,13 +38,17 @@ const router = createBrowserRouter([
         path: 'feedback',
         element: <FeedBack></FeedBack>,
       },
+      {
+        path: '*', 
+        element: <NotFound></NotFound>,
+      },
     ],
   },
 ]);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HelmetProvider> {/* Wrap your app with HelmetProvider */}
+    <HelmetProvider>
       <RouterProvider router={router} />
       <ToastContainer />
     </HelmetProvider>
