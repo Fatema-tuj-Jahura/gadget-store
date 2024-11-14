@@ -11,6 +11,7 @@ import Root from './components/Root/Root.jsx';
 import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
+import FeedBack from './components/FeedBack/FeedBack.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
         path:'dashboard',
         element: <Dashboard></Dashboard>,
         loader: () => fetch('/gadgetsData.json')
+      },
+      {
+        path: 'feedback',
+        element: <FeedBack></FeedBack>
+
       }
     ]
   },

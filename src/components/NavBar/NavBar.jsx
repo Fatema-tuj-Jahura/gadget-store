@@ -15,6 +15,7 @@ const NavBar = () => {
             <NavLink to="/" className="hover:underline">Home</NavLink>
             <NavLink to="/statistics" className="hover:underline">Statistics</NavLink>
             <NavLink to="/dashboard" className="hover:underline">Dashboard</NavLink>
+            <NavLink to="/feedback" className="hover:underline">FeedBack</NavLink>
         </div>
 
         {/* Icons */}
