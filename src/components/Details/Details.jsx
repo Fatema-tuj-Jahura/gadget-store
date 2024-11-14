@@ -16,22 +16,21 @@ const Details = () => {
     console.log(gadget)
 
 
-    // const [isInWishlist, setIsInWishlist] = useState(false);
+    const [isInWishlist, setIsInWishlist] = useState(false);
 
 
     const addToWishlist = (id) => {
-        // if (!isInWishlist) {
-        //     setIsInWishlist(true);
-        //     toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
-        // }
-        toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
-        wishCart(id);
+        if (!isInWishlist) {
+            setIsInWishlist(true);
+            toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
+            wishCart(id);
+        }
+        // toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
+        // wishCart(id);
     };
 
 
     const addToCart = (id) => {
-        
-       
         toast(`Great choice! ${gadget.product_title} has been added to your cart. Happy shopping!`);
         addCart(id);
     };
@@ -105,13 +104,14 @@ const Details = () => {
                     Add to Cart <FaShoppingCart />
                 </button>
                 <button
-                    onClick={() => addToWishlist(GadgetId)}
-                    // disabled={isInWishlist}
-                    className={`py-3 px-3 border-2 border-black rounded-full shadow-lg hover:bg-gray-500 `}
-                >
-                    <FaHeart />
-                   
+                  onClick={() => addToWishlist(GadgetId)}
+                  disabled={isInWishlist} // Disable button based on isInWishlist state
+                  className={`py-3 px-3 border-2 rounded-full shadow-lg 
+                  ${isInWishlist ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'border-black hover:bg-gray-500 text-black'}`}
+                                                             >
+                   <FaHeart />
                 </button>
+
                  </div>
                </div>
             </div>
