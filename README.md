@@ -8,7 +8,7 @@ A modern e-commerce website where users can browse, add gadgets to their cart or
 
 ## Requirement Document
 
-**[Project Requirement Document]()**
+**[Project Requirement Document](https://docs.google.com/document/d/1ALk5yU9mEePWDHmnYT2AS1o-c789xdsXIai-XP-R788/edit?addon_store&tab=t.0)**
 
 ##  Key React Concepts Used
 
