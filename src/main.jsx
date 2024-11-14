@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -9,6 +10,7 @@ import {
 import Root from './components/Root/Root.jsx';
 import Home from './components/Home/Home.jsx';
 import Details from './components/Details/Details.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
         path: '/details/:id',
         element: <Details></Details>,
         loader: () => fetch('/gadgetsData.json')
+      },
+      {
+        path:'dashboard',
+        element: <Dashboard></Dashboard>,
+        loader: () => fetch('/gadgetsData.json')
       }
     ]
   },
@@ -31,5 +38,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <ToastContainer/>
   </StrictMode>,
 )

@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { FaStar, FaHeart, FaShoppingCart} from 'react-icons/fa';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import {  toast } from 'react-toastify';
+import { addCart } from '../../utility/addToDB';
+import { wishCart } from '../../utility/addAgainDB';
+
+
+
 
 const Details = () => {
     const { id } = useParams();
@@ -11,19 +15,27 @@ const Details = () => {
     const gadget= data.find(gadget => gadget.product_id === GadgetId);
     console.log(gadget)
 
-    const [isInWishlist, setIsInWishlist] = useState(false);
 
-    const addToWishlist = () => {
-        if (!isInWishlist) {
-            setIsInWishlist(true);
-            toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
-        }
+    // const [isInWishlist, setIsInWishlist] = useState(false);
+
+
+    const addToWishlist = (id) => {
+        // if (!isInWishlist) {
+        //     setIsInWishlist(true);
+        //     toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
+        // }
+        toast(`Wishlist updated! You can find ${gadget.product_title} in your wishlist`);
+        wishCart(id);
     };
 
-    const addToCart = () => {
+
+    const addToCart = (id) => {
         
+       
         toast(`Great choice! ${gadget.product_title} has been added to your cart. Happy shopping!`);
+        addCart(id);
     };
+
 
     return (
         <div className=' min-h-screen'>
@@ -33,6 +45,8 @@ const Details = () => {
              Explore the latest gadget that will take your experience to the next level. <br /> From smart devices to coolest experience we have it all.
             </p>
             </div>
+
+
 
 
             <div className="absolute inset-x-0 mx-auto -bottom-12 z-20 w-11/12 md:w-3/4 lg:w-2/3 bg-white p-8 rounded-xl shadow-lg">
@@ -59,7 +73,8 @@ const Details = () => {
                 ))}
                 </ul>
 
-            
+
+           
             <div className="flex items-center gap-1">
                 <h4 className="text-xl font-semibold mb-2">Rating</h4>
                 <FaStar size={18} color="yellow" />
@@ -70,71 +85,39 @@ const Details = () => {
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" />
                     <input type="radio" name="rating-2" className="mask mask-star-2 bg-yellow-400" defaultChecked />
-                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" className="mask mask-star-2 bg-gradient-to-r from-yellow-400 via-orange-200 to-white" />
                 </div>
                 <div className="px-2 py-2 rounded-full bg-white border-gray-950 shadow-lg">
                     <p className="text-black font-semibold">{gadget.rating}</p>
                 </div>
             </div>
 
-            
+
+           
             <div className="flex items-center gap-3 mt-2">
-                <div>
-                <button
-                    onClick={addToCart}
+                   <button
+                    onClick={() => addToCart(GadgetId)}
                     className="flex items-center gap-3 bg-purple-500 text-white py-2 px-4 rounded-2xl hover:bg-purple-600"
-                >
+                   >
                     Add to Cart <FaShoppingCart />
                 </button>
-                <ToastContainer
-                  position="top-center"
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                  theme="colored"
-                  transition: Bounce
-                />
-                </div>
-                <div>
                 <button
-                    onClick={addToWishlist}
-                    disabled={isInWishlist}
-                    className={`py-3 px-3 border-black rounded-full shadow-lg ${
-                        isInWishlist
-                            ? 'bg-gray-300 text-black cursor-not-allowed'
-                            : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
-                    }`}
+                    onClick={() => addToWishlist(GadgetId)}
+                    // disabled={isInWishlist}
+                    className={`py-3 px-3 border-2 border-black rounded-full shadow-lg hover:bg-gray-500 `}
                 >
                     <FaHeart />
+                   
                 </button>
-                <ToastContainer
-                  position="top-center"
-                  autoClose={5000}
-                  hideProgressBar={false}
-                  newestOnTop={false}
-                  closeOnClick
-                  rtl={false}
-                  pauseOnFocusLoss
-                  draggable
-                  pauseOnHover
-                  theme="light"
-                />
-                </div>
                  </div>
                </div>
             </div>
           </div>
 
- </div>
 
-           
-   
+ </div>   
     );
 };
+
 
 export default Details;
